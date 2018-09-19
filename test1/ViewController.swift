@@ -21,6 +21,9 @@ class ViewController: UIViewController {
 //×       behind.enabled = false
 //×       behind.enabled = true
 // if  スライド動いている時は無効にさせる・再生/停止ボタンで停止の表示中はボタン無効でもある
+//        behind.setTileLabel("テストボタン",forState: UIControlState.Normal)
+
+
         
         dispImageNO += 1
         displayImage()
@@ -100,7 +103,9 @@ class ViewController: UIViewController {
     }
 }
 
-
+//①不明点を調べてもわからず。質問はどのようにすればいいか。
+//②根本的にわからないから調べるきっかけすらわからない。何を質問すればいいのか。
+//③わからないから調べる。でも上記が理由で結局わからず時間が過ぎる。限られた時間で進めるにはどうしたら良いか。考えることは重要だが、初心者にとっては時間ロスの可能性がある。
 //1つ目の画面ではスライドショー, 2つ目の画面では拡大画像を表示します   >>>> セグエ紐付けまで実施
 //自動送りの間は、進むボタンと戻るボタンはタップ不可にしてください
 //再生ボタンをタップすると停止ボタンになり、停止ボタンをタップすると再生ボタンにしてください
