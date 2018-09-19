@@ -9,11 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-
-
     @IBOutlet weak var imageview: UIImageView!
     
+    @IBAction func behind(_ sender: Any) {
+        dispImageNO += 1
+        displayImage()
+    }
+    @IBAction func Forward(_ sender: Any) {
+        dispImageNO -= 1
+        displayImage()
+    }
+    @IBAction func auto(_ sender: Any) {
+        //タイマー設定
+    timer = Timer.scheduledTimer (timeInterval: 2.0, target: self, selector : #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+    }
+
 //一定の間隔で処理を行うためのタイマー
     var timer : Timer!
     
@@ -31,31 +41,23 @@ class ViewController: UIViewController {
         if dispImageNO > 4{
             dispImageNO = 0
         }
-        
 //表示している画像の番号から名前を取り出し
         let name=imageNameArray[dispImageNO]
 //画像の読み込み
         let image = UIImage(named: name)
 //Image viewに読み込んだ画像をセット
         imageview.image = image
-        
-    }
-    
-  
+        }
     override func viewDidLoad() {
         super.viewDidLoad()
-////ここにテキストではviewdidload,didreceivememorywarningは無視してあるものと。この２つはそもそもなに？
 //①バンドルした画像ファイルを読み込み。②UIImageViewに画像をくくりつけ
-        let image = UIImage(named : "ANA.jpg")
-        imageview.image = image
+       let image = UIImage(named : "ANA.jpg")
+      imageview.image = image
         
  //タイマー設定
-        timer = Timer.scheduledTimer (timeInterval: 2.0, target: self, selector : #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+   //     timer = Timer.scheduledTimer (timeInterval: 2.0, target: self, selector : #selector(updateTimer(_:)), userInfo: nil, repeats: true)
     }
-    
     //NSTimaerによって一定の間隔で呼び出される関数
-    /// NSTimerによって、一定の間隔で呼び出される関数
-    //func onTimer(timer: Timer) {
     @objc func updateTimer(_ timer: Timer) {
         // 関数が呼ばれていることを確認
         print("onTimer")
@@ -72,7 +74,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
