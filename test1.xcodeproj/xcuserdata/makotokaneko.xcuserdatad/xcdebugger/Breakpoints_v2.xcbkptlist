@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "test1/ViewController.swift"
-            timestampString = "559031598.5446939"
+            timestampString = "559048420.076442"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
             endingLineNumber = "56"
-            landmarkName = "viewDidLoad()"
+            landmarkName = "displayImage()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
