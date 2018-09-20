@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rL1-S6-Ioj">
-                                <rect key="frame" x="54" y="470" width="31" height="30"/>
+                                <rect key="frame" x="77" y="470" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="進む"/>
                                 <connections>
@@ -34,29 +34,32 @@
                                     <action selector="Forward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RtC-OS-6SP"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OmM-AJ-NAP">
+                                <rect key="frame" x="77" y="136" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbB-2E-Wwt">
-                                <rect key="frame" x="251" y="470" width="66" height="30"/>
+                                <rect key="frame" x="257" y="470" width="66" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="再生/停止"/>
                                 <connections>
                                     <action selector="auto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ddk-jZ-dPF"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OmM-AJ-NAP">
-                                <rect key="frame" x="77" y="136" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="imageview" destination="OmM-AJ-NAP" id="3Hx-Ry-HbR"/>
+                        <outlet property="modoru" destination="6AJ-PF-Jga" id="gxd-xf-UkM"/>
+                        <outlet property="start" destination="cbB-2E-Wwt" id="p0H-Qh-4E5"/>
+                        <outlet property="susumu" destination="rL1-S6-Ioj" id="ZYt-l0-TNL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244" y="-53"/>
+            <point key="canvasLocation" x="244" y="-53.523238380809602"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="yUp-EP-xx5">

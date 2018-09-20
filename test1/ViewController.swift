@@ -9,11 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+  
     @IBOutlet weak var imageview: UIImageView!
-    
-    
-    
-    
+    @IBOutlet weak var susumu: UIButton!
+    @IBOutlet weak var modoru: UIButton!
+    @IBOutlet weak var start: UIButton!
     
     @IBAction func behind(_ sender: Any) {
         
@@ -22,29 +22,34 @@ class ViewController: UIViewController {
 //×       behind.enabled = true
 // if  スライド動いている時は無効にさせる・再生/停止ボタンで停止の表示中はボタン無効でもある
 //        behind.setTileLabel("テストボタン",forState: UIControlState.Normal)
-
-
-        
         dispImageNO += 1
         displayImage()
     }
     @IBAction func Forward(_ sender: Any) {
 // if  スライド動いている時は無効にさせる・再生/停止ボタンで停止の表示中はボタン無効でもある
-        
-        
         dispImageNO -= 1
         displayImage()
-        
-        
     }
     @IBAction func auto(_ sender: Any) {
-//タイマー設定
-    timer = Timer.scheduledTimer (timeInterval: 2.0, target: self, selector : #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+        if timer == nil {
+            timer = Timer.scheduledTimer (timeInterval: 2.0, target: self, selector : #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+            start.setTitle("停止",for: .normal)
+            susumu.isEnabled = false
+            modoru.isEnabled = false
+             } else {
+       self.timer.invalidate()
+        self.timer = nil
+          start.setTitle("再生",for: .normal)
+           susumu.isEnabled = true
+          modoru.isEnabled = true
+        }
+
+       }
+        
+//タイマー設定 → if関数
+//    timer = Timer.scheduledTimer (timeInterval: 2.0, target: self, selector : #selector(updateTimer(_:)), userInfo: nil, repeats: true)
 //auto時のラベル変更
-   
-        
-        
-    }
+//    }
 
 //一定の間隔で処理を行うためのタイマー
     var timer : Timer!
@@ -103,13 +108,8 @@ class ViewController: UIViewController {
     }
 }
 
-//①不明点を調べてもわからず。質問はどのようにすればいいか。
-//②根本的にわからないから調べるきっかけすらわからない。何を質問すればいいのか。
-//③わからないから調べる。でも上記が理由で結局わからず時間が過ぎる。限られた時間で進めるにはどうしたら良いか。考えることは重要だが、初心者にとっては時間ロスの可能性がある。
+
 //1つ目の画面ではスライドショー, 2つ目の画面では拡大画像を表示します   >>>> セグエ紐付けまで実施
-//自動送りの間は、進むボタンと戻るボタンはタップ不可にしてください
-//再生ボタンをタップすると停止ボタンになり、停止ボタンをタップすると再生ボタンにしてください
-//停止ボタンをタップすると自動送りが止まり、進むボタンと戻るボタンをタップ可能にしてください
 //画像をタップすると画面を遷移させ、拡大画像と戻るボタンを表示させてください
 //戻るボタンがタップされると、スライドショー画面に戻り、同じ画像を表示してください
 //プロジェクトを新規作成し、 SlideshowApp というプロジェクト名をつけてください
@@ -121,3 +121,6 @@ class ViewController: UIViewController {
 ////最初の画像の表示時に、戻るボタンをタップすると、最後の画像が表示されるようにしてください
 ////再生ボタンをタップすると自動送りが始まり、2秒毎にスライドさせてください
 ////画像は、Xcodeのナビゲーションエリア（Project Navigator）へドラッグアンドドロップし、Copy items if neededにチェックを入れて、Xcodeプロジェクトへコピーしてください
+////再生ボタンをタップすると停止ボタンになり、停止ボタンをタップすると再生ボタンにしてください
+////自動送りの間は、進むボタンと戻るボタンはタップ不可にしてください
+////停止ボタンをタップすると自動送りが止まり、進むボタンと戻るボタンをタップ可能にしてください
