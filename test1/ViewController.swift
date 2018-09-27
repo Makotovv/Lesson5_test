@@ -57,10 +57,11 @@ class ViewController: UIViewController {
 //表示している画像の番号
     var dispImageNO = 0
     
+    let imageNameArray = ["AIRDO.jpg","ANA.jpg","JAL.jpg","SFJ.jpeg","SNJ.jpg",]
     
 //表示している画像の番号を元に画像を表示する
     func displayImage(){
-        let imageNameArray = ["AIRDO.jpg","ANA.jpg","JAL.jpg","SFJ.jpeg","SNJ.jpg",]
+    //let imageNameArray = ["AIRDO.jpg","ANA.jpg","JAL.jpg","SFJ.jpeg","SNJ.jpg",]
 //範囲より下を指している場合、最後の画像を表示
         if dispImageNO < 0{
             dispImageNO = 4
@@ -106,6 +107,26 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //segueの設定
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let secondviewController :secondViewController = segue.destination as! secondViewController
+        
+//          secondviewController.selectphoto = UIImage(named: name)
+//          secondviewController.selectphoto = image
+//          secondviewController.selectphoto = imageview.image
+            secondviewController.selectphoto = UIImage(named:imageNameArray[dispImageNO])
+        
+        
+        
+    }
+
+    //戻り
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
+    
+    
+    
 }
 
 

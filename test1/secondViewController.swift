@@ -15,11 +15,6 @@ class secondViewController: UIViewController {
     @IBOutlet weak var Lphoto: UIImageView!
     
     var selectphoto : UIImage!
-    
-
-    
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +22,6 @@ class secondViewController: UIViewController {
         
         
    Lphoto.image = selectphoto
-        
-        
         
         
         // Do any additional setup after loading the view.
