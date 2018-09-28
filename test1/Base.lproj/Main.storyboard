@@ -27,31 +27,43 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AJ-PF-Jga">
-                                <rect key="frame" x="-193" y="252" width="737" height="467"/>
+                                <rect key="frame" x="157" y="469" width="37" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="戻る" image="AIRDO.jpg"/>
+                                <state key="normal" title="戻る">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="Forward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RtC-OS-6SP"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OmM-AJ-NAP">
-                                <rect key="frame" x="77" y="136" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbB-2E-Wwt">
-                                <rect key="frame" x="251" y="441" width="66" height="76"/>
+                                <rect key="frame" x="251" y="449" width="66" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="再生/停止"/>
                                 <connections>
                                     <action selector="auto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ddk-jZ-dPF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eN-3e-9lp">
+                                <rect key="frame" x="51" y="83" width="266" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button・image"/>
+                                <connections>
+                                    <action selector="imagebutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U6R-cs-RKa"/>
+                                    <segue destination="oQj-aD-j2B" kind="show" id="cEq-uu-Z4e"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c36-Um-Dlw">
+                                <rect key="frame" x="77" y="295" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="imageview" destination="OmM-AJ-NAP" id="3Hx-Ry-HbR"/>
+                        <outlet property="imagebutton" destination="4eN-3e-9lp" id="6YS-6r-J8A"/>
                         <outlet property="modoru" destination="6AJ-PF-Jga" id="gxd-xf-UkM"/>
                         <outlet property="start" destination="cbB-2E-Wwt" id="p0H-Qh-4E5"/>
                         <outlet property="susumu" destination="rL1-S6-Ioj" id="ZYt-l0-TNL"/>
@@ -59,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244" y="-53.523238380809602"/>
+            <point key="canvasLocation" x="156" y="-138"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="yUp-EP-xx5">
@@ -78,7 +90,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLU-MN-t7u">
-                                <rect key="frame" x="0.0" y="118" width="375" height="175"/>
+                                <rect key="frame" x="0.0" y="118" width="375" height="226"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -94,10 +106,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vff-8E-U1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="tb8-mG-6N7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="904.79999999999995" y="-52.623688155922046"/>
+            <point key="canvasLocation" x="958" y="-54"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="AIRDO.jpg" width="700" height="467"/>
-    </resources>
 </document>

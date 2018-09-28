@@ -10,26 +10,39 @@ import UIKit
 
 class ViewController: UIViewController {
   
-    @IBOutlet weak var imageview: UIImageView!
+//    @IBOutlet weak var imageview: UIImageView!
     @IBOutlet weak var susumu: UIButton!
     @IBOutlet weak var modoru: UIButton!
     @IBOutlet weak var start: UIButton!
     
+    //button と image の設定
+    
+    @IBOutlet weak var imagebutton: UIButton!
+    
+    
+
+    
+    
+
     @IBAction func behind(_ sender: Any) {
-        
 //buttonの有効、無効化
-//×       behind.enabled = false
-//×       behind.enabled = true
 // if  スライド動いている時は無効にさせる・再生/停止ボタンで停止の表示中はボタン無効でもある
 //        behind.setTileLabel("テストボタン",forState: UIControlState.Normal)
         dispImageNO += 1
         displayImage()
     }
+    
+    
+    
+    
     @IBAction func Forward(_ sender: Any) {
 // if  スライド動いている時は無効にさせる・再生/停止ボタンで停止の表示中はボタン無効でもある
         dispImageNO -= 1
         displayImage()
     }
+    
+    
+    
     @IBAction func auto(_ sender: Any) {
         if timer == nil {
             timer = Timer.scheduledTimer (timeInterval: 2.0, target: self, selector : #selector(updateTimer(_:)), userInfo: nil, repeats: true)
@@ -50,13 +63,14 @@ class ViewController: UIViewController {
 //    timer = Timer.scheduledTimer (timeInterval: 2.0, target: self, selector : #selector(updateTimer(_:)), userInfo: nil, repeats: true)
 //auto時のラベル変更
 //    }
-
 //一定の間隔で処理を行うためのタイマー
+    
+    
     var timer : Timer!
+    
     
 //表示している画像の番号
     var dispImageNO = 0
-    
     let imageNameArray = ["AIRDO.jpg","ANA.jpg","JAL.jpg","SFJ.jpeg","SNJ.jpg",]
     
 //表示している画像の番号を元に画像を表示する
@@ -75,19 +89,30 @@ class ViewController: UIViewController {
 //Imageviewに読み込んだ画像をセット
         let name=imageNameArray[dispImageNO]
         let image = UIImage(named: name)
-        imageview.image = image
+//        imageview.image = image
+//        imagebutton.image = image
+//        imagebutton.setImage(UIImage(named:imageNameArray[dispImageNO], for: .normal)
+        imagebutton.setImage(image!, for: .normal)
         }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 //バンドルした画像ファイルを読み込み。 コメント0919　→ 初期の画像
 //UIImageViewに画像をセット        コメント0919 → 初期の画像
-         let image = UIImage(named : "ANA.jpg")
-         imageview.image = image
-//タイマー設定  → ボタンへ移動
-//     timer = Timer.scheduledTimer (timeInterval: 2.0, target: self, selector : #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+           let image = UIImage(named : "ANA.jpg")
+//         imagebutton.image = image
+//         imagebutton.setImage(UIImage(named:imageNameArray[dispImageNO], for: .normal)
+//           imagebutton.setImage(UIImage(named:image), for: .normal)
+           imagebutton.setImage(image!, for: .normal)
+
+        
+        
+        
         }
+    
+
+    
     
     
 //imaerによって一定の間隔で呼び出される関数
@@ -101,7 +126,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-
+    
+    
+    
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
