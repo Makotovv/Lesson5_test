@@ -44,8 +44,12 @@
                                     <action selector="auto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ddk-jZ-dPF"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c36-Um-Dlw">
+                                <rect key="frame" x="38" y="51" width="298" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eN-3e-9lp">
-                                <rect key="frame" x="0.0" y="20" width="375" height="175"/>
+                                <rect key="frame" x="0.0" y="51" width="375" height="175"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button・image"/>
@@ -54,10 +58,6 @@
                                     <segue destination="oQj-aD-j2B" kind="show" id="nb2-aL-5lr"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c36-Um-Dlw">
-                                <rect key="frame" x="0.0" y="20" width="375" height="192"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -90,10 +90,15 @@
                                     <segue destination="tb8-mG-6N7" kind="unwind" unwindAction="unwind:" id="aUI-8a-NAV"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLU-MN-t7u">
-                                <rect key="frame" x="0.0" y="118" width="375" height="226"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="edU-nR-Mfa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="226"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xLU-MN-t7u">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="226"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="I3o-tQ-Rob"/>
@@ -105,7 +110,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vff-8E-U1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="tb8-mG-6N7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="958" y="-54"/>
+            <point key="canvasLocation" x="935" y="-138"/>
         </scene>
     </scenes>
 </document>

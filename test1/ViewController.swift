@@ -102,7 +102,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 //バンドルした画像ファイルを読み込み。 コメント0919　→ 初期の画像
 //UIImageViewに画像をセット        コメント0919 → 初期の画像
-           let image = UIImage(named : "ANA.jpg")
+           let image = UIImage(named : "AIRDO.jpg")
 //         imagebutton.image = image
 //         imagebutton.setImage(UIImage(named:imageNameArray[dispImageNO], for: .normal)
 //           imagebutton.setImage(UIImage(named:image), for: .normal)
