@@ -45,17 +45,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eN-3e-9lp">
-                                <rect key="frame" x="51" y="83" width="266" height="192"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="175"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button・image"/>
                                 <connections>
-                                    <action selector="imagebutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U6R-cs-RKa"/>
-                                    <segue destination="oQj-aD-j2B" kind="show" id="cEq-uu-Z4e"/>
+                                    <action selector="imagebutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="npR-fN-265"/>
+                                    <segue destination="oQj-aD-j2B" kind="show" id="nb2-aL-5lr"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c36-Um-Dlw">
-                                <rect key="frame" x="77" y="295" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -63,6 +63,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="c36-Um-Dlw" id="PUN-GF-FeF"/>
                         <outlet property="imagebutton" destination="4eN-3e-9lp" id="6YS-6r-J8A"/>
                         <outlet property="modoru" destination="6AJ-PF-Jga" id="gxd-xf-UkM"/>
                         <outlet property="start" destination="cbB-2E-Wwt" id="p0H-Qh-4E5"/>
@@ -71,13 +72,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156" y="-138"/>
+            <point key="canvasLocation" x="156" y="-138.0809595202399"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="yUp-EP-xx5">
             <objects>
                 <viewController id="oQj-aD-j2B" customClass="secondViewController" customModule="test1" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oxl-8P-1AF">
+                    <view key="view" contentMode="scaleToFill" id="oxl-8P-1AF" customClass="UIImageView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -99,8 +100,6 @@
                     </view>
                     <connections>
                         <outlet property="Lphoto" destination="xLU-MN-t7u" id="otY-To-jc3"/>
-                        <outlet property="backbutton" destination="zaL-vm-y7p" id="erz-fC-yEv"/>
-                        <outlet property="secondimageView" destination="xLU-MN-t7u" id="kQt-wh-yG4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vff-8E-U1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -15,12 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var modoru: UIButton!
     @IBOutlet weak var start: UIButton!
     
-    //button と image の設定
-    
+
     @IBOutlet weak var imagebutton: UIButton!
     
+    @IBOutlet weak var imageView: UIImageView!
     
-
+    @IBAction func imagebutton(_ sender: Any) {
+    }
     
     
 
@@ -92,7 +93,8 @@ class ViewController: UIViewController {
 //        imageview.image = image
 //        imagebutton.image = image
 //        imagebutton.setImage(UIImage(named:imageNameArray[dispImageNO], for: .normal)
-        imagebutton.setImage(image!, for: .normal)
+//        imagebutton.setImage(image!, for: .normal)
+        imageView.image = image
         }
     
     
@@ -104,7 +106,8 @@ class ViewController: UIViewController {
 //         imagebutton.image = image
 //         imagebutton.setImage(UIImage(named:imageNameArray[dispImageNO], for: .normal)
 //           imagebutton.setImage(UIImage(named:image), for: .normal)
-           imagebutton.setImage(image!, for: .normal)
+//           imagebutton.setImage(image!, for: .normal)
+        imageView.image = image
 
         
         
